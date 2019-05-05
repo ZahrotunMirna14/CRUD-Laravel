@@ -51,7 +51,7 @@ class BukuController extends Controller
      */
     public function show($id)
     {
-      $buku = Buku::find($id);
+      $buku =Buku::find($id);
       return view ('buku.detail', compact('buku'));
     }
     /**
@@ -85,6 +85,7 @@ class BukuController extends Controller
       $buku->penerbit = $request->get('penerbit');
       $buku->tahun_terbit = $request->get('tahun_terbit');
       $buku->pengarang = $request->get('pengarang');
+      $buku->save();
       return redirect() -> route('buku.index')
                         -> with('success','New BookList Succesfully Updated');
     }
@@ -96,9 +97,6 @@ class BukuController extends Controller
      */
     public function destroy($id)
     {
-      $buku = Buku::find($id);
-      $buku->delete();
-      return redirect() -> route('buku.index')
-                        -> with('success','BookList Succesfully Deleted');
+      
     }
 }

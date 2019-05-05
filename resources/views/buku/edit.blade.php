@@ -25,19 +25,19 @@
       <div class="row">
         <div class="col-md-12">
           <strong>Judul</strong>
-          <input type="text" name="judul" class="form-control" value="{{$buku->judul}}">
+          <input type="text" name="judul" class="form-control" >
         </div>
         <div class="col-md-12">
           <strong>Penerbit</strong>
-          <input type="text" name="penerbit" class="form-control" value="{{$buku->penerbit}}">
+          <input type="text" name="penerbit" class="form-control" >
         </div>
         <div class="col-md-12">
           <strong>Tahun Terbit</strong>
-          <input class="form-control" value="{{$buku->alamat}}" name="tahun_terbit">
+          <input class="form-control" name="tahun_terbit">
         </div>
         <div class="col-md-12">
           <strong>Pengarang</strong>
-          <input class="form-control" value="{{$buku->pengarang}}" name="pengarang">
+          <input class="form-control" name="pengarang">
         </div>
         <div class="col-md-12"><br>
           <a href="{{route('buku.index')}}" class="btn btn-sm btn-success">Back</a>
