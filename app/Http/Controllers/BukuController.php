@@ -88,6 +88,7 @@ class BukuController extends Controller
       $buku->save();
       return redirect() -> route('buku.index')
                         -> with('success','New BookList Succesfully Updated');
+
     }
     /**
      * Remove the specified resource from storage.
@@ -97,6 +98,9 @@ class BukuController extends Controller
      */
     public function destroy($id)
     {
-      
+      $buku = Buku::find($id);
+      $buku->delete();
+      return redirect() -> route('buku.index')
+                        -> with('success','BookList Succesfully Deleted');
     }
 }
